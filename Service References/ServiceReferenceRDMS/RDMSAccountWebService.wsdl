@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://10.78.56.9/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://10.78.56.9/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://10.78.56.9/">
+      <s:element name="testConnection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:TestConnectionRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TestConnectionRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="validationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="requestID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="testConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="testConnectionResult" type="tns:TestConnectionResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TestConnectionResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="requestID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="returnFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="returnCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="returnMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="searchUserAppOrgList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:SearchUserAppOrgListRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SearchUserAppOrgListRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ouid" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="searchUserAppOrgListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchUserAppOrgListResult" type="tns:SearchUserAppOrgListResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SearchUserAppOrgListResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionResponse">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="appOrgInfoSize" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="appOrgInfoList" type="tns:ArrayOfAppOrgInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfAppOrgInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AppOrgInfo" nillable="true" type="tns:AppOrgInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AppOrgInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="appOrgID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="appOrgName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="appOrgParentID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="appOrgPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="searchAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:SearchAccountRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SearchAccountRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountInfo" type="tns:AccountInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AccountInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CNPCCommonGender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNPCCommonJobName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNPCCommonMobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNPCCommonOrg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNPCCommonPostion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNPCEmployeeNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNPCisManager" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="displayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="employeeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="homePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ouid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="accountStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="searchAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchAccountResult" type="tns:SearchAccountResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SearchAccountResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionResponse">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="accountInfoSize" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="accountInfoList" type="tns:ArrayOfAccountInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfAccountInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccountInfo" nillable="true" type="tns:AccountInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="checkAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:CheckAccountRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CheckAccountRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="userPassword" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="reservation" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="checkAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkAccountResult" type="tns:CheckAccountResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CheckAccountResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="requestID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="returnFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="returnMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="checkGuid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:CheckGuidRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CheckGuidRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="checkGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkGuidResult" type="tns:CheckGuidResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CheckGuidResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="orgName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="orgID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="getFuns">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetFunsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetFunsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="funID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="getFunsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFunsResult" type="tns:GetFunsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetFunsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:TestConnectionResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Funs" type="tns:ArrayOfFunInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfFunInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FunInfo" nillable="true" type="tns:FunInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FunInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="F_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="P_F_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fun_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ICON" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SORT_SEQUENCE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsHave" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="RWS" type="tns:ArrayOfRWINFO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRWINFO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RWINFO" nillable="true" type="tns:RWINFO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RWINFO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="testConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:testConnection" />
+  </wsdl:message>
+  <wsdl:message name="testConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:testConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchUserAppOrgListSoapIn">
+    <wsdl:part name="parameters" element="tns:searchUserAppOrgList" />
+  </wsdl:message>
+  <wsdl:message name="searchUserAppOrgListSoapOut">
+    <wsdl:part name="parameters" element="tns:searchUserAppOrgListResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:searchAccount" />
+  </wsdl:message>
+  <wsdl:message name="searchAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:searchAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:checkAccount" />
+  </wsdl:message>
+  <wsdl:message name="checkAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:checkAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:checkGuid" />
+  </wsdl:message>
+  <wsdl:message name="checkGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:checkGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFunsSoapIn">
+    <wsdl:part name="parameters" element="tns:getFuns" />
+  </wsdl:message>
+  <wsdl:message name="getFunsSoapOut">
+    <wsdl:part name="parameters" element="tns:getFunsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RDMSAccountWebServiceSoap">
+    <wsdl:operation name="testConnection">
+      <wsdl:input message="tns:testConnectionSoapIn" />
+      <wsdl:output message="tns:testConnectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchUserAppOrgList">
+      <wsdl:input message="tns:searchUserAppOrgListSoapIn" />
+      <wsdl:output message="tns:searchUserAppOrgListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchAccount">
+      <wsdl:input message="tns:searchAccountSoapIn" />
+      <wsdl:output message="tns:searchAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkAccount">
+      <wsdl:input message="tns:checkAccountSoapIn" />
+      <wsdl:output message="tns:checkAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkGuid">
+      <wsdl:input message="tns:checkGuidSoapIn" />
+      <wsdl:output message="tns:checkGuidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFuns">
+      <wsdl:input message="tns:getFunsSoapIn" />
+      <wsdl:output message="tns:getFunsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RDMSAccountWebServiceSoap" type="tns:RDMSAccountWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="testConnection">
+      <soap:operation soapAction="http://10.78.56.9/testConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchUserAppOrgList">
+      <soap:operation soapAction="http://10.78.56.9/searchUserAppOrgList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAccount">
+      <soap:operation soapAction="http://10.78.56.9/searchAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAccount">
+      <soap:operation soapAction="http://10.78.56.9/checkAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkGuid">
+      <soap:operation soapAction="http://10.78.56.9/checkGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFuns">
+      <soap:operation soapAction="http://10.78.56.9/getFuns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RDMSAccountWebServiceSoap12" type="tns:RDMSAccountWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="testConnection">
+      <soap12:operation soapAction="http://10.78.56.9/testConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchUserAppOrgList">
+      <soap12:operation soapAction="http://10.78.56.9/searchUserAppOrgList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAccount">
+      <soap12:operation soapAction="http://10.78.56.9/searchAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAccount">
+      <soap12:operation soapAction="http://10.78.56.9/checkAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkGuid">
+      <soap12:operation soapAction="http://10.78.56.9/checkGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFuns">
+      <soap12:operation soapAction="http://10.78.56.9/getFuns" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RDMSAccountWebService">
+    <wsdl:port name="RDMSAccountWebServiceSoap" binding="tns:RDMSAccountWebServiceSoap">
+      <soap:address location="http://10.78.56.98:90/RDMSAccountWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RDMSAccountWebServiceSoap12" binding="tns:RDMSAccountWebServiceSoap12">
+      <soap12:address location="http://10.78.56.98:90/RDMSAccountWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
