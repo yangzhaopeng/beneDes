@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tableAttributes>
+  <tableAttribute ename="JH" cname="井号" checked="1" />
+  <tableAttribute ename="GSXYJB" cname="效益类别" checked="1" />
+  <tableAttribute ename="PJDY" cname="单元名称" checked="1" />
+  <tableAttribute ename="SCSJ" cname="生产时间" checked="1" />
+  <tableAttribute ename="JKCQL" cname="井口月产气量" checked="1" />
+  <tableAttribute ename="FKQL" cname="放空气量" checked="1" />
+  <tableAttribute ename="TRQSPL" cname="天然气商品量" checked="1" />
+  <tableAttribute ename="JKCYL" cname="凝析油产量" checked="0" />
+  <tableAttribute ename="YYSPL" cname="凝析油商品量" checked="1" />
+  <tableAttribute ename="ZSL" cname="月产水量" checked="0" />
+  <tableAttribute ename="ZJCLF" cname="直接材料费" checked="0" />
+  <tableAttribute ename="ZJRLF" cname="直接燃料费" checked="0" />
+  <tableAttribute ename="ZJDLF" cname="直接动力费" checked="0" />
+  <tableAttribute ename="ZJRYF" cname="直接人员费" checked="0" />
+  <tableAttribute ename="JXZYF" cname="井下作业费" checked="0" />
+  <tableAttribute ename="WHXJXZYF" cname="维护性井下作业费" checked="0" />
+  <tableAttribute ename="CJSJF" cname="测井试井费" checked="0" />
+  <tableAttribute ename="WHXLF" cname="维护修理费" checked="0" />
+  <tableAttribute ename="YQCLF" cname="油气处理费" checked="0" />
+  <tableAttribute ename="LYF" cname="拉油费" checked="0" />
+  <tableAttribute ename="TRQJHF" cname="天然气净化费" checked="0" />
+  <tableAttribute ename="YSF" cname="运输费" checked="0" />
+  <tableAttribute ename="QTZJF" cname="其它直接费" checked="0" />
+  <tableAttribute ename="CKGLF" cname="厂矿管理费" checked="0" />
+  <tableAttribute ename="ZYYQCP" cname="减自用气产品" checked="0" />
+  <tableAttribute ename="ZJZH" cname="折旧折耗" checked="0" />
+  <tableAttribute ename="QJF" cname="期间费" checked="0" />
+  <tableAttribute ename="KTF" cname="勘探费" checked="0" />
+  <tableAttribute ename="CZCB" cname="操作成本" checked="0" />
+  <tableAttribute ename="ZDYXF" cname="最低运行费" checked="0" />
+  <tableAttribute ename="SCCB" cname="生产成本" checked="0" />
+  <tableAttribute ename="YYCB" cname="营运成本" checked="0" />
+  <tableAttribute ename="XSSR" cname="总销售收入" checked="0" />
+  <tableAttribute ename="TRQXSSR" cname="天然气销售收入" checked="0" />
+  <tableAttribute ename="YYXSSR" cname="凝析油销售收入" checked="0" />
+  <tableAttribute ename="BSCPXSSR" cname="伴生产品销售收入" checked="0" />
+  <tableAttribute ename="XSSJ" cname="总销售税金" checked="0" />
+  <tableAttribute ename="TRQXSSJ" cname="天然气销售税金" checked="0" />
+  <tableAttribute ename="YYXSSJ" cname="凝析油销售税金" checked="0" />
+  <tableAttribute ename="BSCPXSSJ" cname="伴生产品销售税金" checked="0" />
+  <tableAttribute ename="SHSR" cname="总税后收入" checked="0" />
+</tableAttributes>

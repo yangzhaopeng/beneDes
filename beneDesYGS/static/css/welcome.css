@@ -1,0 +1,18 @@
+﻿body
+{
+	background-image: url(/static/image/bg.jpg);
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	font-family:hiragino sans gb, microsoft yahei, arial, sans-sarif;
+	font-size: 14px;
+}
+.tip
+{
+	margin: 50px 0 0 50px;	
+}
+.tip span
+{
+	color:#739b2e;
+	font-size: 18px;	
+}

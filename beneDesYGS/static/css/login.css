@@ -1,0 +1,126 @@
+﻿/* CSS Document */
+body{margin:0; padding:0; font-size:12px; line-height:20px; background:#FFFFFF; text-align:left;}
+div,p,li,span{font-family:"微软雅黑"; font-size:12px;}
+img{border:0;}
+ul,li{list-style-image:none; list-style-position:outside; list-style-type:none; margin:0; padding:0;}
+.clear{clear:both;}
+.main{
+	width:988px;
+	margin-top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	top:45%;
+	bottom:55%;
+	text-align:center;
+	vertical-align:middle;
+	
+}
+.logo{
+	background:url(../images/img00.gif) 0 0 no-repeat;
+	height:97px;
+	width:502px;
+	margin-left:-265px;
+}
+.logo1
+{
+	background:url(../images/img001.gif) 0 0 no-repeat;
+	height:97px;
+	width:502px;
+	margin-left:-265px;
+}
+.greenbar{
+	background:url(../images/loginbar.jpg) no-repeat;
+	height:170px;
+	margin-top:15px;
+}
+.qinghai{
+	background:url(../images/img00.gif) 0 -97px no-repeat;
+	height:131px;
+	width:500px;
+	margin-top:15px;
+	margin-left:-420px;
+}
+.loginbox{
+	width:350px;
+	height:392px;
+	float:right;
+	margin-right:70px;
+	margin-top:-350px;
+}
+.loginboxl{
+	background:url(../images/k_border.png) 0 0 no-repeat;
+	height:392px;
+	width:10px;
+	float:left;
+}
+.loginboxr{
+	background:url(../images/k_border.png) -10px 0 no-repeat;
+	height:392px;
+	width:10px;
+	float:left;
+}
+.loginboxm{
+	background:url(../images/repeatbg.png) 0 -226px repeat-x;
+	height:392px;
+	width:330px;
+	float:left;
+}
+.logintitle{
+	background:url(../images/img00.gif) 0 -228px no-repeat;
+	height:59px;
+	width:168px;
+	margin-top:25px;
+	margin-left:20px;
+}
+.logintitle1{
+	background:url(../images/img001.gif) 0 -228px no-repeat;
+	height:59px;
+	width:168px;
+	margin-top:25px;
+	margin-left:20px;
+}
+.hrbg{
+	width:280px;
+	height:10px;
+	background:url(../images/hr.png) no-repeat;
+	margin:20px auto;
+	border:none;
+}
+ul.shuru{
+	width:220px;
+	margin:0 auto;
+}
+ul.shuru li{
+	height:30px;
+	color:#2c6db0
+}
+input{
+	border:1px solid #2c6db0;
+	height:20px;
+	width:150px;
+}
+input.denglu{
+	background:url(../images/img00.gif) -513px 0 no-repeat;
+	height:27px;
+	width:77px;
+	border:none;
+	margin-left:48px;
+	cursor:pointer;
+}
+ul.shuru li.intention{
+	color:#FF0000;
+	margin-top:5px;
+}
+.footer{
+	background:url(../images/repeatbg.png) 0 -170px repeat-x;
+	height:44px;
+	color:#2c6db0;
+	text-align:center;
+	padding-top:10px;
+	margin-top:15px;
+}
+.checkStyle
+{
+    vertical-align:middle; 
+    margin-bottom:2px;
+}
