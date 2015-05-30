@@ -1,0 +1,25 @@
+﻿.header-container
+{
+	height: 71px;
+	background-image:url(../image/home_bj.gif);
+}
+.header-container .header{
+	height: 65px;background-image:url(../image/header.jpg);background-repeat: no-repeat;
+}
+.x-tree-node-text,.x-tree-panel .x-panel-header
+{
+	cursor:pointer;	
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
