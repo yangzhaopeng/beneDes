@@ -13,7 +13,7 @@ namespace beneDes
     public class sysNY_model
     {
         /// <summary>
-        ///初始化系统参数
+        ///初始化系统参数单独
         /// </summary>
         /// <param name="cyc_ids">部门id</param>
         /// <param name="data_type">CYC   or  CQC</param>
